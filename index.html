@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="img/icon.png">
+    <meta charset="UTF-8">
+    <title>My Food</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&display=swap');
+        body {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            margin: 0;
+        }
+        .header {
+            background-color: #321052;
+            padding: 16px 16px 30px 16px;
+        }
+        .flex {
+            display: flex;
+        }
+        .justify-between {
+            justify-content: space-between;
+        }
+        .justify-evenly {
+            justify-content: space-evenly;
+        }
+        .justify-around {
+            justify-content: space-around;
+        }
+        .logo {
+            width: 120px;
+        }
+        .align-center {
+            align-items: center;
+        }
+        .align-stretch {
+            align-items: stretch;
+        }
+        .mt-23 {
+            margin-top: 23px;
+        }
+        .width-f {
+            width: 100%;
+        }
+
+        .navigation {
+            margin-left: 20px;
+        }
+        .navigation a, .a-brand {
+            padding-left: 20px;
+            padding-right: 20px;
+            text-decoration: none;
+            font-family: 'Bebas Neue', cursive;
+            /*font-family: 'Anton', sans-serif;*/
+            color: #ffdba8;
+            font-size: 25px;
+            letter-spacing: 3px;
+        }
+        .font-brand {
+            font-family: 'Bebas Neue', cursive;
+            /*font-family: 'Anton', sans-serif;*/
+            color: #ffdba8;
+            font-size: 25px;
+            letter-spacing: 3px;
+        }
+        .font-bebas {
+            font-family: 'Bebas Neue', cursive;
+        }
+        .font-anton {
+            font-family: 'Anton', sans-serif;
+        }
+        .sign-up-button {
+            background-color: #f6b24a;
+            border: 0;
+            border-radius: 50px;
+            padding: 10px 20px;
+            color: #000000;
+            letter-spacing: 1px;
+            /*font-weight: bold;*/
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+<header class="header flex">
+    <img class="logo" src="img/logo.png" alt="Site logo">
+    <div class="flex justify-between align-center width-f mt-23">
+                <nav class="flex navigation">
+                    <a href="#">Food Catalog</a>
+                    <a href="#">Blog</a>
+                    <a href="#">Forum</a>
+                </nav>
+                <div class="flex align-center">
+                    <a href="#" class="a-brand">
+                        Sign in
+                    </a>
+                    <button class="sign-up-button font-brand">
+                        Register
+                    </button>
+                </div>
+    </div>
+</header>
+</body>
+</html>
