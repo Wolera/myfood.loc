@@ -6,39 +6,66 @@
     <title>My Food</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
         body {
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
             margin: 0;
         }
-        .header {
-            background-color: #321052;
-            padding: 16px 16px 30px 16px;
+
+        h1, p {
+            margin: 0;
         }
+
+        .text-white {
+            color: white;
+        }
+
+        .main-video {
+            min-height: 550px;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .header {
+            /*background-color: #321052;*/
+            padding: 16px 16px 30px 16px;
+            position: relative;
+            z-index: 1;
+        }
+
         .flex {
             display: flex;
         }
+
         .justify-between {
             justify-content: space-between;
         }
+
         .justify-evenly {
             justify-content: space-evenly;
         }
+
         .justify-around {
             justify-content: space-around;
         }
+
         .logo {
             width: 120px;
         }
+
         .align-center {
             align-items: center;
         }
+
         .align-stretch {
             align-items: stretch;
         }
+
         .mt-23 {
             margin-top: 23px;
         }
+
         .width-f {
             width: 100%;
         }
@@ -46,6 +73,7 @@
         .navigation {
             margin-left: 20px;
         }
+
         .navigation a, .a-brand {
             padding-left: 20px;
             padding-right: 20px;
@@ -56,19 +84,27 @@
             font-size: 25px;
             letter-spacing: 3px;
         }
-        .font-brand {
+
+        .text-brand-style {
             font-family: 'Bebas Neue', cursive;
             /*font-family: 'Anton', sans-serif;*/
             color: #ffdba8;
             font-size: 25px;
             letter-spacing: 3px;
         }
+
         .font-bebas {
             font-family: 'Bebas Neue', cursive;
         }
+
         .font-anton {
             font-family: 'Anton', sans-serif;
         }
+
+        .font-lato {
+            font-family: 'Lato', sans-serif;
+        }
+
         .sign-up-button {
             background-color: #f6b24a;
             border: 0;
@@ -79,29 +115,71 @@
             /*font-weight: bold;*/
             margin-left: 20px;
         }
+        .text-color-teal {
+            color: #5caa90;
+        }
     </style>
 </head>
 <body>
 <header class="header flex">
     <img class="logo" src="img/logo.png" alt="Site logo">
     <div class="flex justify-between align-center width-f mt-23">
-                <nav class="flex navigation">
-                    <a href="#">Food Catalog</a>
-                    <a href="#">Blog</a>
-                    <a href="#">Forum</a>
-                </nav>
-                <div class="flex align-center">
-                    <a href="#" class="a-brand">
-                        Sign in
-                    </a>
-                    <button class="sign-up-button font-brand">
-                        Register
-                    </button>
-                </div>
+        <nav class="flex navigation">
+            <a href="#">Food Catalog</a>
+            <a href="#">Blog</a>
+            <a href="#">Forum</a>
+        </nav>
+        <div class="flex align-center">
+            <a href="#" class="a-brand">
+                Sign in
+            </a>
+            <button class="sign-up-button text-brand-style">
+                Register
+            </button>
+        </div>
     </div>
 </header>
 <main>
-    <img style="width: 100%" src="/img/background-food.png" alt="">
+    <section style="position: relative;
+            top: -125px;">
+        <video
+                loop="loop"
+                autoplay="autoplay"
+                playsinline=""
+                muted="muted"
+                class="main-video"
+        >
+            <source
+                    src="/videos/galaxy.mp4"
+                    type="video/mp4"
+            >
+        </video>
+        <div class="font-lato" style="max-width: 600px; background-color: #182949">
+            <h1
+                    style="font-size: 60px;"
+                    class="text-white"
+            >
+                Turbocharge your
+                <span class="text-color-teal">development career</span>
+            </h1>
+            <p class="text-white" style="max-width: 449px; font-size: 20px">
+                Chris Courses provides students and professionals
+                a college level web development education
+            </p>
+            <button>
+                Get Started
+            </button>
+        </div>
+    </section>
+    <!--    <img-->
+    <!--            style="-->
+    <!--            width: 100%;-->
+    <!--            position: relative;-->
+    <!--            top: -122px-->
+    <!--            "-->
+    <!--            src="/img/background-food.png"-->
+    <!--            alt=""-->
+    <!--    >-->
 </main>
 </body>
 </html>
