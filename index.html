@@ -4,9 +4,7 @@
     <link rel="icon" href="img/icon.png">
     <meta charset="UTF-8">
     <title>My Food</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+    <style id="initial-settings">
         body {
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
@@ -16,10 +14,10 @@
         h1, p {
             margin: 0;
         }
-
-        .text-white {
-            color: white;
-        }
+    </style>
+    <style id="full-elements">
+        @import url('https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
         .main-video {
             min-height: 550px;
@@ -34,40 +32,8 @@
             z-index: 1;
         }
 
-        .flex {
-            display: flex;
-        }
-
-        .justify-between {
-            justify-content: space-between;
-        }
-
-        .justify-evenly {
-            justify-content: space-evenly;
-        }
-
-        .justify-around {
-            justify-content: space-around;
-        }
-
         .logo {
             width: 120px;
-        }
-
-        .align-center {
-            align-items: center;
-        }
-
-        .align-stretch {
-            align-items: stretch;
-        }
-
-        .mt-23 {
-            margin-top: 23px;
-        }
-
-        .width-f {
-            width: 100%;
         }
 
         .navigation {
@@ -93,6 +59,57 @@
             letter-spacing: 3px;
         }
 
+        .sign-up-button {
+            background-color: #f6b24a;
+            border: 0;
+            border-radius: 50px;
+            padding: 10px 20px;
+            color: #000000;
+            letter-spacing: 1px;
+            /*font-weight: bold;*/
+            margin-left: 20px;
+        }
+    </style>
+    <style id="css-properties">
+        @import url('https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+        .text-white {
+            color: white;
+        }
+
+        .flex {
+            display: flex;
+        }
+
+        .justify-between {
+            justify-content: space-between;
+        }
+
+        .justify-evenly {
+            justify-content: space-evenly;
+        }
+
+        .justify-around {
+            justify-content: space-around;
+        }
+
+        .align-center {
+            align-items: center;
+        }
+
+        .align-stretch {
+            align-items: stretch;
+        }
+
+        .mt-23 {
+            margin-top: 23px;
+        }
+
+        .width-f {
+            width: 100%;
+        }
+
         .font-bebas {
             font-family: 'Bebas Neue', cursive;
         }
@@ -105,18 +122,50 @@
             font-family: 'Lato', sans-serif;
         }
 
-        .sign-up-button {
-            background-color: #f6b24a;
-            border: 0;
-            border-radius: 50px;
-            padding: 10px 20px;
-            color: #000000;
-            letter-spacing: 1px;
-            /*font-weight: bold;*/
-            margin-left: 20px;
-        }
         .text-color-teal {
             color: #5caa90;
+        }
+
+        .bg-white {
+            background-color: white;
+        }
+
+        .mt-30 {
+            margin-top: 30px
+        }
+
+        .ml-30 {
+            margin-left: 30px;
+        }
+
+        .border-none {
+            border: none;
+        }
+
+        .py-12 {
+            padding-top: 12px;
+            padding-bottom: 12px;
+        }
+
+        .px-28 {
+            padding-left: 28px;
+            padding-right: 28px;
+        }
+
+        .round-full {
+            border-radius: 9999px;
+        }
+
+        .round-4 {
+            border-radius: 4px;
+        }
+
+        .relative {
+            position: relative;
+        }
+
+        .absolute {
+            position: absolute;
         }
     </style>
 </head>
@@ -140,21 +189,21 @@
     </div>
 </header>
 <main>
-    <section style="position: relative;
-            top: -125px;">
+    <section>
         <video
                 loop="loop"
                 autoplay="autoplay"
                 playsinline=""
                 muted="muted"
-                class="main-video"
+                class="main-video absolute"
+                style="top:0; z-index: -100"
         >
             <source
                     src="/videos/galaxy.mp4"
                     type="video/mp4"
             >
         </video>
-        <div class="font-lato" style="max-width: 600px; background-color: #182949">
+        <div class="font-lato" style="max-width: 600px; margin-left: 50px; margin-top: 100px;">
             <h1
                     style="font-size: 60px;"
                     class="text-white"
@@ -162,11 +211,11 @@
                 Turbocharge your
                 <span class="text-color-teal">development career</span>
             </h1>
-            <p class="text-white" style="max-width: 449px; font-size: 20px">
+            <p class="text-white mt-30" style="max-width: 449px; font-size: 20px;">
                 Chris Courses provides students and professionals
                 a college level web development education
             </p>
-            <button>
+            <button class="mt-30 bg-white text-color-teal border-none py-12 px-28 round-4">
                 Get Started
             </button>
         </div>
