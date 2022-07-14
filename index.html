@@ -3,12 +3,17 @@
 <head>
     <link rel="icon" href="img/icon.png">
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Food</title>
     <style id="initial-settings">
         body {
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
             margin: 0;
+        }
+
+        button {
+            font: inherit;
         }
 
         h1, p {
@@ -20,7 +25,7 @@
         @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
         .main-video {
-            min-height: 550px;
+            height: 689px;
             width: 100%;
             object-fit: cover;
         }
@@ -30,6 +35,19 @@
             padding: 16px 16px 30px 16px;
             position: relative;
             z-index: 1;
+        }
+
+        .nav {
+            flex-direction: row;
+        }
+
+        @media (max-width: 809px) {
+            .nav {
+                flex-direction: column;
+            }
+            .logo {
+                display: none;
+            }
         }
 
         .logo {
@@ -167,12 +185,46 @@
         .absolute {
             position: absolute;
         }
+
+        .bolder {
+            font-weight: bolder;
+        }
+
+        .mx-auto {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .max-w-1200 {
+            max-width: 1200px
+        }
+
+
+
+        .text-60 {
+            font-size: 60px;
+        }
+
+        .text-20 {
+            font-size: 20px;
+        }
+
+        @media (max-width: 640px) {
+            .sm-text-36 {
+                font-size: 36px;
+            }
+
+            .sm-text-16 {
+                font-size: 16px;
+            }
+        }
+
     </style>
 </head>
 <body>
-<header class="header flex">
+<header class="header flex mx-auto max-w-1200 bg-blue" >
     <img class="logo" src="img/logo.png" alt="Site logo">
-    <div class="flex justify-between align-center width-f mt-23">
+    <div class="nav flex justify-between align-center width-f mt-23">
         <nav class="flex navigation">
             <a href="#">Food Catalog</a>
             <a href="#">Blog</a>
@@ -203,22 +255,24 @@
                     type="video/mp4"
             >
         </video>
-        <div class="font-lato" style="max-width: 600px; margin-left: 50px; margin-top: 100px;">
-            <h1
-                    style="font-size: 60px;"
-                    class="text-white"
-            >
-                Turbocharge your
-                <span class="text-color-teal">development career</span>
-            </h1>
-            <p class="text-white mt-30" style="max-width: 449px; font-size: 20px;">
-                Chris Courses provides students and professionals
-                a college level web development education
-            </p>
-            <button class="mt-30 bg-white text-color-teal border-none py-12 px-28 round-4">
-                Get Started
-            </button>
+        <div class="max-w-1200 mx-auto">
+            <div class="font-lato" style="max-width: 600px; margin-top: 100px;">
+                <h1
+                        class="text-white sm-text-36 text-60"
+                >
+                    Turbocharge your
+                    <span class="text-color-teal">development career</span>
+                </h1>
+                <p class="text-white mt-30 sm-text-16 text-20" style="max-width: 449px;">
+                    Chris Courses provides students and professionals
+                    a college level web development education
+                </p>
+                <button class="mt-30 bg-white text-color-teal border-none py-12 px-28 round-4 bolder">
+                    Get Started
+                </button>
+            </div>
         </div>
+
     </section>
     <!--    <img-->
     <!--            style="-->
