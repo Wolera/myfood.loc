@@ -41,15 +41,6 @@
             flex-direction: row;
         }
 
-        @media (max-width: 809px) {
-            .nav {
-                flex-direction: column;
-            }
-            .logo {
-                display: none;
-            }
-        }
-
         .logo {
             width: 120px;
         }
@@ -96,10 +87,6 @@
             color: white;
         }
 
-        .flex {
-            display: flex;
-        }
-
         .justify-between {
             justify-content: space-between;
         }
@@ -144,9 +131,9 @@
             color: #5caa90;
         }
 
-        .bg-white {
-            background-color: white;
-        }
+        /*.bg-white {*/
+        /*    background-color: white;*/
+        /*}*/
 
         .mt-30 {
             margin-top: 30px
@@ -174,9 +161,9 @@
             border-radius: 9999px;
         }
 
-        .round-4 {
-            border-radius: 4px;
-        }
+        /*.round-4 {*/
+        /*    border-radius: 4px;*/
+        /*}*/
 
         .relative {
             position: relative;
@@ -220,17 +207,18 @@
         }
 
     </style>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-<header class="header flex mx-auto max-w-1200 bg-blue" >
+<header class="header flex mx-auto max-w-1200 bg-blue justify-between" >
     <img class="logo" src="img/logo.png" alt="Site logo">
     <div class="nav flex justify-between align-center width-f mt-23">
-        <nav class="flex navigation">
+        <nav class="hidden md:flex navigation">
             <a href="#">Food Catalog</a>
             <a href="#">Blog</a>
             <a href="#">Forum</a>
         </nav>
-        <div class="flex align-center">
+        <div class="flex align-center hidden md:flex">
             <a href="#" class="a-brand">
                 Sign in
             </a>
@@ -238,6 +226,11 @@
                 Register
             </button>
         </div>
+        <div class="md:hidden">
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 md:hidden text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
     </div>
 </header>
 <main>
@@ -256,9 +249,9 @@
             >
         </video>
         <div class="max-w-1200 mx-auto">
-            <div class="font-lato" style="max-width: 600px; margin-top: 100px;">
+            <div class="font-lato font-bold" style="max-width: 600px; margin-top: 100px;">
                 <h1
-                        class="text-white sm-text-36 text-60"
+                        class="text-white sm-text-36 text-60 leading-none"
                 >
                     Turbocharge your
                     <span class="text-color-teal">development career</span>
@@ -267,7 +260,10 @@
                     Chris Courses provides students and professionals
                     a college level web development education
                 </p>
-                <button class="mt-30 bg-white text-color-teal border-none py-12 px-28 round-4 bolder">
+<!--                <button class="mt-30 bg-white text-color-teal border-none py-12 px-28 round-4">-->
+<!--                    Get Started-->
+<!--                </button>-->
+                <button class="bg-white">
                     Get Started
                 </button>
             </div>
